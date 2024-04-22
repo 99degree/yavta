@@ -47,4 +47,5 @@ yavta_sources = files([
 yavta  = executable('yavta', yavta_sources,
                     include_directories : include_directories('include'),
                     dependencies : yavta_dependencies,
+		    link_args: ['-static','-static-libgcc'],
                     install : true)

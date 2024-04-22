@@ -2,7 +2,7 @@ CROSS_COMPILE ?=
 
 CC	:= $(CROSS_COMPILE)gcc
 CFLAGS	?= -O2 -W -Wall -Iinclude
-LDFLAGS	?=
+LDFLAGS	?= -static -static-libgcc
 LIBS	:= -lrt
 
 $(warning WARNING: Makefile support is deprecated, please switch to meson)
